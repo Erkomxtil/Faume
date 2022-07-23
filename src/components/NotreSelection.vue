@@ -1,0 +1,63 @@
+<template>
+  <section class="notreSelection">
+    <h2>Notre sélection</h2>
+    <div class="productWrapper">
+      <div class="product">
+        <img src="../assets/images/product1.jpeg" alt="T-shirt"><br>
+        <span>T-shirt Homme</span><br>
+        70€
+      </div>
+      <div class="product">
+        <img src="../assets/images/product2.jpeg" alt="Veste cuir"><br>
+        <span>Veste cuir</span><br>
+        170€
+      </div>
+      <div class="product">
+        <img src="../assets/images/product3.jpeg" alt="Trench Homme"><br>
+        <span>Trench Homme</span><br>
+        250€
+      </div>
+      <div class="product">
+        <img src="../assets/images/product4.jpeg" alt="Sac cuir"><br>
+        <span>Sac cuir</span><br>
+        360€
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+    name: 'NotreSelection',
+    mounted() {
+    }
+}
+</script>
+
+<style lang="scss">
+  .notreSelection {
+    padding: 210px 60px;
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .productWrapper {
+      display: flex;
+      gap: 22px;
+
+      .product {
+        font-size: 20px;
+        img {
+          max-width: 587px;
+        }
+        span {
+          font-size: 22px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+</style>
