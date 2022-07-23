@@ -26,6 +26,10 @@ export default {
       display: flex;
       justify-content: center;
       gap: 120px;
+
+      @media (max-width: 650px) {
+        gap: 70px;
+      }
     }
   }
 
