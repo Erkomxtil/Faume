@@ -38,6 +38,15 @@ export default {
         font-weight: 700;
         font-size: 30px;
       }
+
+      @media (max-width: 1260px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1260px) {
+      flex-direction: column;
+      gap: unset;
     }
   }
 </style>

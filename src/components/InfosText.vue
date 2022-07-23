@@ -36,6 +36,10 @@ export default {
             border: 2px solid #000000;
             padding: 40px 106px;
             text-transform: uppercase;
+
+            @media (max-width: 650px) {
+                padding: 20px 53px
+            }
         }
         .discover:hover {
             background-color: #000000;

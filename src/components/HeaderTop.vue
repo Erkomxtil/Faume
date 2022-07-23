@@ -2,7 +2,9 @@
 <template>
     <section class="header">
       <div class="menu">
-        <div><span><a href="#">Homme</a></span> <span><a href="#">Femme</a></span> <a href="#">Concept</a> </div>
+        <div class="nav">
+          <span><a href="#">Homme</a></span> <span><a href="#">Femme</a></span> <a href="#">Concept</a> 
+        </div>
         <div><img class="logo" src="../assets/images/logo.svg" alt="logo"></div>
         <div class="cartWrapper">
           <a href="#" data-modal><img data-img-link class="cart" src="../assets/images/icon-cart.png" alt="Cart"></a>
@@ -73,6 +75,13 @@ export default {
       padding: 20px 40px;
 
     }
+
+    @media (max-width:1200px ) {
+      .nav {
+        display: none;
+      }
+
+    }
   }
 
   .logo {
@@ -83,9 +92,13 @@ export default {
     &.black {
       filter: invert(100%) sepia(63%) saturate(6234%) hue-rotate(246deg) brightness(87%) contrast(156%);
     }
+
+    @media (max-width: 1200px) {
+      margin-left: unset;
+      width: 80%;
+    }
   }
   .cartWrapper {
-    min-width: 234px;
     text-align: right;
     .cart {
       width: auto;
@@ -118,12 +131,19 @@ export default {
       font-size: 150px;
       text-transform: uppercase;
       padding-bottom: 120px;
+
+      @media (max-width: 650px) {
+        font-size: 50px;
+      }
     }
     span {
       font-size: 26px;
       border: 2px solid #ffffff;
       padding: 40px 106px;
       text-transform: uppercase;
+      @media (max-width: 650px) {
+        padding: 20px 53px;
+      }
     }
 
     .discover:hover {

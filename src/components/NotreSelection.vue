@@ -89,6 +89,15 @@ export default {
           }
         }
       }
+
+      @media (max-width: 2480px){
+        overflow: hidden;
+        overflow-x: scroll;
+      }
+    }
+
+    @media (max-width: 2480px ) {
+      padding: 180px 20px;
     }
   }
 

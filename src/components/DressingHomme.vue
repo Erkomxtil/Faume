@@ -34,11 +34,28 @@ export default {
       border: 2px solid #000000;
       padding: 40px 106px;
       text-transform: uppercase;
+
+      @media (max-width: 650px) {
+        padding: 20px 53px;
+      }
     }
     .discover:hover {
       background-color: #000000;
       color: #ffffff;
       cursor: pointer;
+    }
+
+    @media (max-width: 1260px) {
+      flex-direction: column;
+
+      div {
+        width: 100%;
+      }
+
+      .greyBtn {
+        height: 300px;
+        margin-top: -20px;
+      }
     }
   }
 </style>
