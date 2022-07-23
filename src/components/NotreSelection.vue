@@ -3,9 +3,14 @@
     <h2>Notre sélection</h2>
     <div class="productWrapper">
       <div class="product">
-        <img src="../assets/images/product1.jpeg" alt="T-shirt"><br>
-        <span>T-shirt Homme</span><br>
-        70€
+        <div class="imgWrapper">
+          <img class="product1" src="../assets/images/product1.jpeg" alt="T-shirt">
+          <img class="product1a" src="../assets/images/product5.jpeg" alt="T-shirt zoom">
+        </div>
+        <div class="textInfo">
+          <span>T-shirt Homme</span><br>
+          70€
+        </div>
       </div>
       <div class="product">
         <img src="../assets/images/product2.jpeg" alt="Veste cuir"><br>
@@ -30,6 +35,18 @@
 export default {
     name: 'NotreSelection',
     mounted() {
+      let imageWrapper = document.querySelector('.imgWrapper')
+      let product1 = document.querySelector('.product1')
+      let product1a = document.querySelector('.product1a')
+      imageWrapper.addEventListener('mouseover', () => {
+        product1.classList.add('over')
+        product1a.classList.add('visible')
+      })
+
+      imageWrapper.addEventListener('mouseleave', () => {
+        product1.classList.remove('over')
+        product1a.classList.remove('visible')
+      })
     }
 }
 </script>
@@ -49,12 +66,27 @@ export default {
 
       .product {
         font-size: 20px;
+        .imgWrapper {
+          height: 858.08px;
+        }
+
         img {
           max-width: 587px;
         }
         span {
           font-size: 22px;
           font-weight: bold;
+        }
+
+        .product1.over {
+          display: none;
+        }
+
+        .product1a {
+          display: none;
+          &.visible {
+            display: block;
+          }
         }
       }
     }
